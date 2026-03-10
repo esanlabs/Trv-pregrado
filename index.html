@@ -98,7 +98,7 @@
         <a-plane width="1.8" height="0.5" color="#E3173E" material="shader: flat" position="0 0 0.01"></a-plane>
         <a-circle radius="0.25" color="#E3173E" position="-0.9 0 0.01" material="shader: flat"></a-circle>
         <a-circle radius="0.25" color="#E3173E" position="0.9 0 0.01" material="shader: flat"></a-circle>
-        <a-text value="¡JUGAR AHORA!" align="center" color="#FFFFFF" width="3.5" position="0 0 0.02"></a-text>
+        <a-text id="textoJugar" value="BIENVENIDO" align="center" color="#FFFFFF" width="3.5" position="0 0 0.02"></a-text>
       </a-entity>
 
     </a-entity>
@@ -118,6 +118,7 @@
     const grupoVideo = document.querySelector('#grupoVideo');
     const contenedorBtn = document.querySelector('#contenedorBoton');
     const textoBoton = document.querySelector('#textoBoton');
+    const textoJugar = document.querySelector('#textoJugar');
     const imgChuwi = document.querySelector('#imgChuwi'); 
     const telon = document.querySelector('#telonNegro');
     const txtPausa = document.querySelector('#txtPausa');
@@ -191,7 +192,11 @@
       telon.emit('cineEnd'); 
       estrellasContainer.setAttribute('visible', 'false');
       textoBoton.setAttribute('visible', 'false');
+      
+      // CAMBIOS SOLICITADOS: Mostrar imagen Chuwi y cambiar texto del botón
       imgChuwi.setAttribute('visible', 'true');
+      textoJugar.setAttribute('value', '¡JUGAR AHORA!');
+      
       contenedorBtn.setAttribute('visible', 'true');
       logoNadir.setAttribute('visible', 'true'); 
       contenedorBtn.emit('showMenu');
