@@ -118,13 +118,15 @@
       <a-entity id="rig" position="0 0 0">
       <a-camera look-controls wasd-controls></a-camera>
 
-      <a-entity oculus-touch-controls="hand: left" 
-                raycaster="objects: .clickable; showLine: true; far: 100" 
-                line="color: #FF0000; opacity: 0.8"></a-entity>
+      <a-entity laser-controls="hand: left" 
+                raycaster="objects: .clickable; far: 100" 
+                line="color: #FF0000; opacity: 1">
+      </a-entity>
       
-      <a-entity oculus-touch-controls="hand: right" 
-                raycaster="objects: .clickable; showLine: true; far: 100" 
-                line="color: #FF0000; opacity: 0.8"></a-entity>
+      <a-entity laser-controls="hand: right" 
+                raycaster="objects: .clickable; far: 100" 
+                line="color: #FF0000; opacity: 1">
+      </a-entity>
     </a-entity>
   </a-scene>
 
@@ -249,6 +251,7 @@
   </script>
 </body>
 </html>
+
 
 
 
