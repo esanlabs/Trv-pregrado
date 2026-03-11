@@ -109,10 +109,14 @@
                   animation__color="property: material.color; dir: alternate; dur: 2000; easing: linear; loop: true; to: #FF0000; from: #00FF00"
                   animation__color2="property: material.color; dir: alternate; dur: 3500; easing: linear; loop: true; to: #0000FF; from: #FFFF00">
           
-          <a-sphere radius="0.005" color="#FF0000" material="shader: flat" position="0 0 0"></a-sphere>
-          
+          <a-sphere radius="0.006" color="#FF0000" material="shader: flat"
+                    animation="property: scale; to: 1.5 1.5 1.5; dur: 500; dir: alternate; loop: true">
+          </a-sphere>
         </a-cursor>
       </a-camera>
+
+      <a-entity oculus-touch-controls="hand: left" raycaster="objects: .clickable; showLine: true; far: 100" line="color: red; opacity: 0.8"></a-entity>
+      <a-entity oculus-touch-controls="hand: right" raycaster="objects: .clickable; showLine: true; far: 100" line="color: red; opacity: 0.8"></a-entity>
     </a-entity>
   </a-scene>
 
@@ -237,4 +241,5 @@
   </script>
 </body>
 </html>
+
 
